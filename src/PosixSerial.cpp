@@ -45,7 +45,7 @@ bool CPosixSerial::Open(char* port)
 	strcpy(m_portName,port);
 	m_portHandle = open ((const char*)m_portName, O_RDWR | O_NOCTTY);
 	if (m_portHandle == -1) {
-		sprintf(text,"Could not open %s\nAlready in use ?!?!\n",m_portName);
+        sprintf(text,"Could not open %s\nAlready in use or is the program run without super user priviledges?\n",m_portName);
         std::cout << text << std::endl;
 		return false;
 	}

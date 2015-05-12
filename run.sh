@@ -1,4 +1,4 @@
 #! /bin/sh
 
 cmake .
-make && chmod +x mvm && ./mvm
+make && chmod +x asuroflash && ./asuroflash
